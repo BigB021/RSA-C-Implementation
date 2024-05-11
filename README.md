@@ -19,8 +19,9 @@ To run this program, you need a C compiler such as GCC installed on your machine
 
 ```bash
 gcc rsa_encryption.c -o rsa_encryption -lm
-The -lm flag links the math library, which is necessary for some of the mathematical functions used in the program.
 ```
+The -lm flag links the math library, which is necessary for some of the mathematical functions used in the program.
+
 3. Run the Program
 
 ```bash
