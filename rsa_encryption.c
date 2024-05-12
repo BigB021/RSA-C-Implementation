@@ -70,7 +70,7 @@ char* decode_to_string(long long int* array, long long int size) {
         fprintf(stderr, "Memory allocation failed\n");
         return NULL;
     }
-    for (long long int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         decoded_string[i] = (char) array[i];
     }
     decoded_string[size] = '\0';
@@ -95,7 +95,7 @@ long long int* encrypt(long long int* message, long long int size, long long int
         printf("Memory allocation failed for encrypted message.\n");
         return NULL;
     }
-    for (long long int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         encrypted[i] = mod_pow(message[i], e, n);
     }
     return encrypted;
@@ -108,7 +108,7 @@ long long int* decrypt(long long int* encrypted, long long int size, long long i
         printf("Memory allocation failed for decrypted message.\n");
         return NULL;
     }
-    for (long long int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         decrypted[i] = mod_pow(encrypted[i], d, n);
     }
     return decrypted;
@@ -116,7 +116,7 @@ long long int* decrypt(long long int* encrypted, long long int size, long long i
 
 // Function to print array elements
 void print_array(long long int* array, long long int size) {
-    for (long long int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         printf("%lld ", array[i]);
     }
     printf("\n");
