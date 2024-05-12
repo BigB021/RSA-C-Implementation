@@ -57,7 +57,7 @@ long long int* encode_string(char* string){
     }
 
     // Encoding message to ASCII values
-    for (long long int i = 0; i < strlen(string); i++){
+    for (int i = 0; i < strlen(string); i++){
         encoded_string[i] = string[i];
     }
     return encoded_string;
